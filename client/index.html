@@ -10,11 +10,7 @@
 <body class="container">
     
     <h1 class="text-center">JS</h1>
-    
-<<<<<<< HEAD
-=======
-    
->>>>>>> 1c55ec080336240f0f29dc30fb517a0c6876285d
+
     <form class="form">
         
         <div class="form-group">
@@ -67,10 +63,12 @@
     </script>
     <script>
 
-        var n1 = new Negociacao();
+        var n1 = new Negociacao(new Date(), 10, 3);
         console.log(n1)
 
+        var volume = n1.obtemVolume();
+        console.log(volume)
+
     </script>
-    
 </body>
 </html>
