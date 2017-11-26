@@ -63,14 +63,23 @@
     </script>
     <script>
 
-        var n1 = new Negociacao(new Date(), 10, 3);
+        var n1 = new Negociacao(new Date(), 1, 5);
         console.log(n1)
 
-        var d = n1.data;
-        var q = n1.quantidade;
-        var v = n1.valor;
+        n1.data.setDate(30)
 
-        console.log(v)
+        console.log(n1)
+
+        console.log('defesa.2')
+
+        var dataEntrada = new Date();
+
+        var n2 = new Negociacao(dataEntrada, 2, 5);
+        console.log(n2)
+
+        dataEntrada.setDate(30)
+
+        console.log(n2)
 
     </script>
 </body>
