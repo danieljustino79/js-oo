@@ -66,8 +66,11 @@
         var n1 = new Negociacao(new Date(), 10, 3);
         console.log(n1)
 
-        var volume = n1.obtemVolume();
-        console.log(volume)
+        var d = n1.getData();
+        var q = n1.getQuantidade();
+        var v = n1.getValor();
+
+        console.log(v)
 
     </script>
 </body>
