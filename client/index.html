@@ -11,7 +11,7 @@
     
     <h1 class="text-center">JS</h1>
 
-    <form class="form">
+    <form class="form" onSubmit="negociacaoController.executa(event)">
         
         <div class="form-group">
             <label for="data">Data</label>
@@ -61,26 +61,10 @@
     
     <script src="js/app/models/Negociacao.js">    
     </script>
+    <script src="js/app/controllers/NegociacaoController.js">  
+    </script>
     <script>
-
-        var n1 = new Negociacao(new Date(), 1, 5);
-        console.log(n1)
-
-        n1.data.setDate(30)
-
-        console.log(n1)
-
-        console.log('defesa.2')
-
-        var dataEntrada = new Date();
-
-        var n2 = new Negociacao(dataEntrada, 2, 5);
-        console.log(n2)
-
-        dataEntrada.setDate(30)
-
-        console.log(n2)
-
+        let negociacaoController = new NegociacaoController();
     </script>
 </body>
 </html>
