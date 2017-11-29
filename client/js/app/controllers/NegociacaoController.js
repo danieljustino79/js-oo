@@ -3,7 +3,7 @@ class NegociacaoController{
     constructor(){
         let $ = document.querySelector.bind(document);
 
-        this._data = $('#data');
+        this._data = $('#data');        
         this._quantidade = $('#quantidade');
         this._valor = $('#valor');
     }
@@ -11,11 +11,16 @@ class NegociacaoController{
     adiciona(event){
         event.preventDefault();  
 
-        new Negociacao(
-            new Date(this._data.value),
+        let dataFormatada = DateHelper.textoParaData(this._data.value);
+        //let dataFormatada = DateHelper.textoParaData('2020-11-1a');
+        if(!dataFormatada)
+            throw new Error('formato errado');        
+
+        let obj = new Negociacao(
+            dataFormatada,
             this._quantidade.value,
             this._valor.value);
 
-            console.log(this._data.value)
+            console.log(obj._data)
     }
 }
